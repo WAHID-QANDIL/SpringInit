@@ -21,17 +21,13 @@
   <!-- Product and plugin compatibility requirements.
        Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
   <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.gradle</depends>
 
   <actions>
-    <action id="SpringInit.CreateFileFolderAction" class="com.wahid.springinit.springinit.CreateFileFolderAction" text="Create File/Folder"
-            description="Create a new file or folder in the project">
-      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    <action id="SpringInitMyPlugin.GenerateSpringPatternAction" class="com.wahid.springinit.springinit.GenerateSpringPatternAction" text="Create Architecture Pattern"
+            description="Create architecture patterns MVC, Clean Architecture...">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
     </action>
-    <action id="SpringInitMyPlugin.CreateArch" class="com.wahid.springinit.springinit.CreateArch" text="Create Architecture Pattern"
-    description="Create architecture patterns MVC, Clean Architecture...">
-    <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
-  </action>
-
   </actions>
 
   <!-- Extension points defined by the plugin.

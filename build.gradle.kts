@@ -9,6 +9,8 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    google()
+    mavenLocal()
 }
 
 // Configure Gradle IntelliJ Plugin
@@ -21,7 +23,12 @@ intellij {
 }
 dependencies {
     implementation("com.google.cloud:google-cloud-aiplatform:3.35.0")
-    compileOnly("org.gradle:gradle-tooling-api:8.0.2")
+    intellij{
+        plugins = listOf("com.intellij.gradle")
+    }
+    intellij{
+        plugins = listOf("gradle")
+    }
 
 }
 
